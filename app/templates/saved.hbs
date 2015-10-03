@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      {{#each model as |post|}}
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+                {{post.title}}
+                <span title="Delete Post From Saved Posts" {{action 'deletePost' post}} class="pull-right hand glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </h3>
+          </div>
+          <div class="panel-body">
+            {{{post.body}}}
+          </div>
+        </div>
+      {{else}}
+        No posts saved.
+      {{/each}}
+    </div>
+  </div>
+</div>

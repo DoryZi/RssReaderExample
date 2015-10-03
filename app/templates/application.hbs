@@ -1,0 +1,18 @@
+
+<div class="navbar navbar-default">
+    <div class="navbar-inner">
+      <a class="navbar-brand" href="#">Bloggr</a>
+      <ul class="nav navbar-nav">
+        <li>{{#link-to 'posts'}}Live Posts{{/link-to}}</li>
+        <li>{{#link-to 'saved'}}Saved Posts{{/link-to}}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="c-notification__container">
+    {{#each notifications as |notification|}}
+      {{notification-message notification=notification}}
+    {{/each}}
+  </div>
+  
+{{outlet}}
